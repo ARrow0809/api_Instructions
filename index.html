@@ -60,7 +60,14 @@
                     <div class="step-number h-12 w-12 rounded-full flex-shrink-0 flex items-center justify-center text-2xl font-bold text-slate-900">1</div>
                     <div>
                         <h4 class="text-xl font-bold mb-2">土地と住所を決める</h4>
-                        <p class="text-slate-400">まず、作品を保管する「土地」を確保します。GitHubで新しい**空のリポジトリ**を作成し、そのURL（住所）をコピーしましょう。</p>
+                        <p class="text-slate-400">まず、作品を保管する「土地」を確保します。GitHubで新しいリポジトリを作成し、そのURL（住所）をコピーしましょう。</p>
+                        <div class="code-block rounded-lg p-4 mt-4">
+                            <h5 class="font-bold text-lg mb-2">リポジトリ作成時のおすすめ設定</h5>
+                            <ul class="list-none text-slate-300 space-y-2">
+                                <li><strong>.gitignore を追加:</strong> <code class="bg-slate-700 rounded px-1">Node</code> を選択。不要なファイルをアップロード対象から除外してくれます。(Noneでも可)</li>
+                                <li><strong>ライセンスを選択:</strong> <code class="bg-slate-700 rounded px-1">MIT License</code> を選択。最も制約が緩く、誰でも自由に使えるライセンスです。</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
                 <!-- Step 2 -->
@@ -191,19 +198,6 @@
                     </div>
                      <p class="text-slate-400 mt-4">この流れを守ることで、あなたのコードは安全に、そして確実に成長していきます。</p>
                 </div>
-            </div>
-        </div>
-
-
-        <!-- Troubleshooting -->
-        <div class="mb-16">
-            <h3 class="text-3xl font-bold mb-8 text-center"><span class="gradient-text">おまけ:</span> よくある問題 🛠️</h3>
-             <div class="step-card rounded-xl p-6">
-                <h4 class="text-xl font-bold mb-2">iPhoneだけでAPIエラーが出る！</h4>
-                <p class="text-slate-400">これはCORSというセキュリティルールが原因です。APIファイル（例: `/api/index.js`）で、「このサイトからのアクセスは安全ですよ」と許可するおまじない（ヘッダー）を追加すると解決します。</p>
-                <pre class="code-block rounded-lg p-4 mt-4 text-sm overflow-x-auto"><code>res.setHeader('Access-Control-Allow-Origin', 'https://あなたのサイト.vercel.app');
-res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
-// ... などのヘッダーを追加</code></pre>
             </div>
         </div>
 
